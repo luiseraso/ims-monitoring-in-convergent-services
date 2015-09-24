@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://ims.fup.edu.co/ontologies/2015/7/untitled-ontology-77#"
+     xml:base="http://ims.fup.edu.co/ontologies/2015/7/untitled-ontology-77"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://ims.fup.edu.co/ontologies/2015/7/untitled-ontology-77">
+        <owl:imports rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ims.fup.edu.co/ontologies/2015/7/untitled-ontology-77#Constraint -->
+
+    <owl:Class rdf:about="http://ims.fup.edu.co/ontologies/2015/7/untitled-ontology-77#Constraint"/>
+    
+
+
+    <!-- http://ims.fup.edu.co/ontologies/2015/7/untitled-ontology-77#Exception -->
+
+    <owl:Class rdf:about="http://ims.fup.edu.co/ontologies/2015/7/untitled-ontology-77#Exception">
+        <rdfs:subClassOf rdf:resource="http://ims.fup.edu.co/ontologies/2015/7/untitled-ontology-77#Incident"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ims.fup.edu.co/ontologies/2015/7/untitled-ontology-77#Incident -->
+
+    <owl:Class rdf:about="http://ims.fup.edu.co/ontologies/2015/7/untitled-ontology-77#Incident">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ims.fup.edu.co/ontologies/2015/7/untitled-ontology-77#Information -->
+
+    <owl:Class rdf:about="http://ims.fup.edu.co/ontologies/2015/7/untitled-ontology-77#Information">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ims.fup.edu.co/ontologies/2015/7/untitled-ontology-77#InputParameter -->
+
+    <owl:Class rdf:about="http://ims.fup.edu.co/ontologies/2015/7/untitled-ontology-77#InputParameter">
+        <rdfs:subClassOf rdf:resource="http://ims.fup.edu.co/ontologies/2015/7/untitled-ontology-77#Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ims.fup.edu.co/ontologies/2015/7/untitled-ontology-77#IntegerRangeValueConstraint -->
+
+    <owl:Class rdf:about="http://ims.fup.edu.co/ontologies/2015/7/untitled-ontology-77#IntegerRangeValueConstraint">
+        <rdfs:subClassOf rdf:resource="http://ims.fup.edu.co/ontologies/2015/7/untitled-ontology-77#NonNegativeValueConstraint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ims.fup.edu.co/ontologies/2015/7/untitled-ontology-77#NonNegativeValueConstraint -->
+
+    <owl:Class rdf:about="http://ims.fup.edu.co/ontologies/2015/7/untitled-ontology-77#NonNegativeValueConstraint">
+        <rdfs:subClassOf rdf:resource="http://ims.fup.edu.co/ontologies/2015/7/untitled-ontology-77#Constraint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ims.fup.edu.co/ontologies/2015/7/untitled-ontology-77#OutputParameter -->
+
+    <owl:Class rdf:about="http://ims.fup.edu.co/ontologies/2015/7/untitled-ontology-77#OutputParameter">
+        <rdfs:subClassOf rdf:resource="http://ims.fup.edu.co/ontologies/2015/7/untitled-ontology-77#Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ims.fup.edu.co/ontologies/2015/7/untitled-ontology-77#Parameter -->
+
+    <owl:Class rdf:about="http://ims.fup.edu.co/ontologies/2015/7/untitled-ontology-77#Parameter"/>
+    
+
+
+    <!-- http://ims.fup.edu.co/ontologies/2015/7/untitled-ontology-77#RangeValueConstraint -->
+
+    <owl:Class rdf:about="http://ims.fup.edu.co/ontologies/2015/7/untitled-ontology-77#RangeValueConstraint">
+        <rdfs:subClassOf rdf:resource="http://ims.fup.edu.co/ontologies/2015/7/untitled-ontology-77#Constraint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ims.fup.edu.co/ontologies/2015/7/untitled-ontology-77#ServiceExecution -->
+
+    <owl:Class rdf:about="http://ims.fup.edu.co/ontologies/2015/7/untitled-ontology-77#ServiceExecution">
+        <rdfs:subClassOf rdf:resource="http://ims.fup.edu.co/ontologies/2015/7/untitled-ontology-77#Information"/>
+    </owl:Class>
+    
+
+
+    <!-- http://ims.fup.edu.co/ontologies/2015/7/untitled-ontology-77#Warning -->
+
+    <owl:Class rdf:about="http://ims.fup.edu.co/ontologies/2015/7/untitled-ontology-77#Warning">
+        <rdfs:subClassOf rdf:resource="http://ims.fup.edu.co/ontologies/2015/7/untitled-ontology-77#Incident"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+

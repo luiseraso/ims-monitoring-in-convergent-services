@@ -1,0 +1,62 @@
+package edu.fup.ims.rules.monitoring
+
+import edu.fup.ims.services.Service
+import edu.fup.ims.services.ServiceInterface
+import edu.fup.ims.services.InfoType
+import edu.fup.ims.services.Constraint
+import edu.fup.ims.services.ConstraintNumberRangeValue
+import edu.fup.ims.events.ServiceCallEvent
+import edu.fup.ims.events.ParameterValueBinding
+import edu.fup.ims.events.NumberRangeValueExceptionEvent
+import edu.fup.ims.events.IncidenceRegister
+
+function Number toNumber(String value, InfoType infoItem) {
+
+	Number result = null;
+	if( infoItem.getDataType() == InfoType.DataType.INT ) {
+		result = Integer.parseInt(value); 
+	}else
+		
+	if( infoItem.getDataType() == InfoType.DataType.FLOAT ) {
+		result = Float.parseFloat(value);
+	}
+
+    return result;
+}
+
+rule "ConstraintNumberRangeValue_PolicyRule"
+dialect  "mvel"
+	when
+		Service( $sName : serviceName, $sInterface : serviceInterface )
+		ServiceCallEvent( serviceName == $sName, $callEventOutputs : outputs )
+		
+		$infoItem : InfoType( $itName: name, dataType in (DataType.INT, DataType.FLOAT) ) from $sInterface.outputs				
+		$pValue : ParameterValueBinding(parameter==$itName, $dataValue: dataValue) from $callEventOutputs		
+				
+		$constraint : ConstraintNumberRangeValue( informationType == $infoItem, maxValue <= toNumber($dataValue, $infoItem) ) from $sInterface.constraints
+		
+		$incidenceRegister : IncidenceRegister()
+	then
+		
+		NumberRangeValueExceptionEvent exception = new NumberRangeValueExceptionEvent($sName, $constraint, $pValue );
+		$incidenceRegister.eventList.add( exception );			
+end
+
+/*
+rule "Constraint Number Range Value - Policy Rule"
+dialect  "mvel"
+	when
+		Service( $serviceName : serviceName, $serviceInterface : serviceInterface )
+		ServiceCallEvent( serviceName == $serviceName, $callEventOutputs : outputs )
+		
+		$infoItem : InfoType( $name : name, dataType in (DataType.INT, DataType.FLOAT) ) from $serviceInterface.outputs				
+		$parameterValue : ParameterValueBinding(parameter == $name, $dataValue : dataValue) from $callEventOutputs		
+				
+		ConstraintNumberRangeValue( informationType == $infoItem, maxValue <= toNumber($dataValue, $infoItem) ) from $serviceInterface.constraints
+	then
+		System.out.println( "\n* R01 ConstraintNumberRangeValue" );
+		System.out.println( "\t infoItem.name: " + $infoItem.name);
+		System.out.println( "\t infoItem.dataType: " + $infoItem.dataType);
+		System.out.println( "\t ConstraintNumberRangeValue: " + $dataValue);						
+end
+*/

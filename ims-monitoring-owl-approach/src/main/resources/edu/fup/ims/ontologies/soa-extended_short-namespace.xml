@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://ims.fup.edu.co/ontologies/2015/7/untitled-ontology-77#"
+     xml:base="http://ims.fup.edu.co/ontologies/2015/7/untitled-ontology-77"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://ims.fup.edu.co/ontologies/2015/7/untitled-ontology-77">
+        <owl:imports rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl"/>
+    </owl:Ontology>    
+
+	<!-- Events -->
+    <owl:Class rdf:about="Information">
+        <rdfs:subClassOf rdf:resource="Event"/>
+    </owl:Class>    
+    <owl:Class rdf:about="ServiceExecution">
+        <rdfs:subClassOf rdf:resource="Information"/>
+    </owl:Class>
+    <owl:Class rdf:about="Incident">
+        <rdfs:subClassOf rdf:resource="Event"/>
+    </owl:Class>
+    <owl:Class rdf:about="Warning">
+        <rdfs:subClassOf rdf:resource="Incident"/>
+    </owl:Class>
+    <owl:Class rdf:about="Exception">
+        <rdfs:subClassOf rdf:resource="Incident"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="ServiceExecution">
+        <rdfs:subClassOf rdf:resource="Information"/>
+    </owl:Class>
+    
+    <!-- Parameter classes -->
+    <owl:Class rdf:about="Parameter"/>
+    <owl:Class rdf:about="InputParameter">
+        <rdfs:subClassOf rdf:resource="Parameter"/>
+        <owl:disjointWith rdf:resource="OutputParameter"/>
+    </owl:Class>	
+    <owl:Class rdf:about="OutputParameter">
+        <rdfs:subClassOf rdf:resource="Parameter"/>
+    </owl:Class>
+    <owl:ObjectProperty rdf:about="hasParameter">
+    	<rdfs:domain rdf:resource="ServiceExecution"/>
+        <rdfs:range rdf:resource="Parameter"/>        
+    </owl:ObjectProperty>			
+    <owl:ObjectProperty rdf:about="hasType">
+        <rdfs:domain rdf:resource="Parameter"/>
+        <rdfs:range rdf:resource="InformationType"/>        
+    </owl:ObjectProperty>	
+    <owl:DatatypeProperty rdf:about="hasValue">
+        <rdfs:domain rdf:resource="Parameter"/>
+    </owl:DatatypeProperty>    
+    
+	<!--  Service execution message representation  -->
+    <owl:NamedIndividual rdf:about="m1">
+        <rdf:type rdf:resource="ServiceExecution"/>
+        <generatedBy rdf:resource="vitalSigns"/>
+        <hasParameter rdf:resource="m1_pUserId"/>
+        <hasParameter rdf:resource="m1_pAge"/>        
+        <hasParameter rdf:resource="m1_pHeight"/>        
+        <hasParameter rdf:resource="m1_pWeight"/>        
+    </owl:NamedIndividual>
+        
+    <owl:NamedIndividual rdf:about="m1_pUserId">
+        <rdf:type rdf:resource="InputParameter"/>
+        <hasType rdf:resource="userId"/>
+        <hasValue rdf:datatype="&xsd;integer">820</hasValue>        
+    </owl:NamedIndividual>
+        
+    <owl:NamedIndividual rdf:about="m1_pAge">
+        <rdf:type rdf:resource="OutputParameter"/>
+        <hasType rdf:resource="age"/>
+        <hasValue rdf:datatype="&xsd;integer">25</hasValue>        
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="m1_pHeight">
+        <rdf:type rdf:resource="OutputParameter"/>
+        <hasType rdf:resource="height"/>
+        <hasValue rdf:datatype="&xsd;integer">33</hasValue>        
+    </owl:NamedIndividual>
+        
+    <owl:NamedIndividual rdf:about="m1_pWeight">
+        <rdf:type rdf:resource="OutputParameter"/>
+        <hasType rdf:resource="weight"/>
+        <hasValue rdf:datatype="&xsd;double">61.8</hasValue>        
+    </owl:NamedIndividual>
+        
+   	<!-- Constraints -->
+    <owl:Class rdf:about="Constraint"/>
+    
+    <owl:ObjectProperty rdf:about="hasConstraint">
+    	<rdfs:domain rdf:resource="InformationType"/>
+        <rdfs:range rdf:resource="Constraint"/>        
+    </owl:ObjectProperty>
+
+    <owl:Class rdf:about="NonNegativeIntegerConstraint">
+        <rdfs:subClassOf rdf:resource="Constraint"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="RangeValueConstraint">
+        <rdfs:subClassOf rdf:resource="Constraint"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="IntegerRangeValueConstraint">
+        <rdfs:subClassOf rdf:resource="RangeValueConstraint"/>
+    </owl:Class>
+    
+    <owl:DatatypeProperty rdf:about="hasMinValue">
+        <rdfs:domain rdf:resource="IntegerRangeValueConstraint"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+	
+    <owl:DatatypeProperty rdf:about="hasMaxValue">
+        <rdfs:domain rdf:resource="IntegerRangeValueConstraint"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+    <!--IntegerRangeValueConstraint in height InfotmationType-->
+    <owl:NamedIndividual rdf:about="height">
+        <rdf:type rdf:resource="InformationType"/>
+        <hasConstraint rdf:resource="heightConstraint"/>
+    </owl:NamedIndividual>
+    
+    <owl:NamedIndividual rdf:about="heightConstraint">
+        <rdf:type rdf:resource="IntegerRangeValueConstraint"/>
+        <hasMaxValue rdf:datatype="&xsd;integer">250</hasMaxValue>
+        <hasMinValue rdf:datatype="&xsd;integer">30</hasMinValue>
+    </owl:NamedIndividual>
+
+</rdf:RDF>
+
+
+ServiceExecution(?x), hasParameter(?x, ?p), Parameter(?p), hasType(?p, ?t), InformationType(?t), hasConstraint(?t, ?c), RangeValueConstraint(?c), hasValue(?p, ?v), hasMinValue(?c, ?minvalue), hasMaxValue(?c, ?maxvalue), swrlb:subtract(?range, ?maxvalue, ?minvalue), swrlb:multiply(?delta, ?range, 0.05), swrlb:add(?boundary, ?minvalue, ?delta), swrlb:lessThan(?v, ?boundary), swrlb:greaterThanOrEqual(?v, ?minvalue) -> Warning(?p)
+
+ServiceExecution(?x), hasParameter(?x, ?p), Parameter(?p), hasType(?p, ?t), InformationType(?t), hasConstraint(?t, ?c), RangeValueConstraint(?c), hasValue(?p, ?v), hasMinValue(?c, ?minvalue), hasMaxValue(?c, ?maxvalue), swrlb:subtract(?range, ?maxvalue, ?minvalue), swrlb:multiply(?delta, ?range, 0.05), swrlb:subtract(?boundary, ?maxvalue, ?delta), swrlb:greaterThan(?v, ?boundary), swrlb:lessThanOrEqual(?v, ?maxvalue) -> Warning(?p)
+
+ServiceExecution(?x), hasParameter(?x, ?p), Parameter(?p), hasType(?p, ?t), InformationType(?t), hasConstraint(?t, ?c), RangeValueConstraint(?c), hasValue(?p, ?v), hasMaxValue(?c, ?maxvalue), swrlb:greaterThan(?v, ?maxvalue) -> Exception(?p)
+
+ServiceExecution(?x), hasParameter(?x, ?p), Parameter(?p), hasType(?p, ?t), InformationType(?t), hasConstraint(?t, ?c), RangeValueConstraint(?c), hasValue(?p, ?v), hasMinValue(?c, ?minvalue), swrlb:lessThan(?v, ?minvalue) -> Exception(?p)

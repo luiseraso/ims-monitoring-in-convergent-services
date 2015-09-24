@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="User Entered Import Resolution" name="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl" uri="soa_v3.owl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1439245147573" name="duplicate:http://www.semanticweb.org/ontologies/2010/01/core-soa.owl" uri="soa_v1.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1439245147573" name="duplicate:http://www.semanticweb.org/ontologies/2010/01/core-soa.owl" uri="soa_v2.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1439245147573" name="http://ims.fup.edu.co/ontologies/2015/7/untitled-ontology-77" uri="soa_v3.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1439245147573" name="duplicate:http://www.semanticweb.org/ontologies/2010/01/core-soa.owl" uri="saved_soa.owl"/>
+    </group>
+</catalog>
