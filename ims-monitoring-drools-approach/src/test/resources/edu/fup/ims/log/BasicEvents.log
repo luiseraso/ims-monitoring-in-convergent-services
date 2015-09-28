@@ -1,0 +1,30 @@
+[
+  {
+    "id": 0,
+    "message": "200",
+    "generatedBy": "getPersonalInfo",
+    "type": "INFO",
+    "priority": 5
+  },
+  {
+    "id": 1,
+    "message": "QoS out of SLA",
+    "generatedBy": "VoiceCall",
+    "type": "WARNING",
+    "priority": 7
+  },
+  {
+    "id": 2,
+    "message": "200",
+    "generatedBy": "SendSMS",
+    "type": "INFO",
+    "priority": 5
+  },
+  {
+    "id": 3,
+    "message": "Insufficient credit",
+    "generatedBy": "SendMMS",
+    "type": "EXCEPTION",
+    "priority": 10
+  }
+]

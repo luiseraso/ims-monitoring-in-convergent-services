@@ -1,0 +1,26 @@
+[
+	{
+	"timestamp" : "14-04-2015 11:01:44.598",
+	"serviceName" : "VitalSings",
+	"inputs":[ 	
+				{ "parameter" : "id", "dataValue" : "98138820" }
+			],
+	"outputs":[
+				{ "parameter": "age", "dataValue" : "300" },
+				{ "parameter": "weight", "dataValue" : "635" },
+				{ "parameter": "tall", "dataValue" : "1610" }
+			]
+	},
+	{
+	"timestamp" : "14-04-2015 11:01:45.821",
+	"serviceName" : "VitalSings",
+	"inputs":[ 	
+				{ "parameter" : "id", "dataValue" : "98138820" }
+			],
+	"outputs":[
+				{ "parameter": "age", "dataValue" : "30" },
+				{ "parameter": "weight", "dataValue" : "63.5" },
+				{ "parameter": "tall", "dataValue" : "161,0" }
+			]
+	},
+]
