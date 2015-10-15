@@ -1,0 +1,122 @@
+[
+	{
+	"timestamp" : "14-04-2015 11:01:44.598",
+	"serviceName" : "HealthService",
+	"inputs":[ 	
+				{ "parameter" : "userId", "dataValue" : "1" }
+			],
+	"outputs":[
+				{ "parameter": "age", "dataValue" : "30" },
+				{ "parameter": "weight", "dataValue" : "73.5" },
+				{ "parameter": "height", "dataValue" : "181.0" }
+			]
+	},
+	{
+	"timestamp" : "14-04-2015 11:01:45.821",
+	"serviceName" : "HealthService",
+	"inputs":[ 	
+				{ "parameter" : "userId", "dataValue" : "2" }
+			],
+	"outputs":[
+				{ "parameter": "age", "dataValue" : "25" },
+				{ "parameter": "weight", "dataValue" : "68.3" },
+				{ "parameter": "height", "dataValue" : "245.0" }
+			]
+	},
+		{
+	"timestamp" : "14-04-2015 11:01:46.598",
+	"serviceName" : "HealthService",
+	"inputs":[ 	
+				{ "parameter" : "userId", "dataValue" : "3" }
+			],
+	"outputs":[
+				{ "parameter": "age", "dataValue" : "30" },
+				{ "parameter": "weight", "dataValue" : "73.5" },
+				{ "parameter": "height", "dataValue" : "35.0" }
+			]
+	},
+		{
+	"timestamp" : "14-04-2015 11:01:47.598",
+	"serviceName" : "HealthService",
+	"inputs":[ 	
+				{ "parameter" : "userId", "dataValue" : "4" }
+			],
+	"outputs":[
+				{ "parameter": "age", "dataValue" : "8" },
+				{ "parameter": "weight", "dataValue" : "73.5" },
+				{ "parameter": "height", "dataValue" : "43.0" }
+			]
+	},
+		{
+	"timestamp" : "14-04-2015 11:01:48.598",
+	"serviceName" : "HealthService",
+	"inputs":[ 	
+				{ "parameter" : "userId", "dataValue" : "5" }
+			],
+	"outputs":[
+				{ "parameter": "age", "dataValue" : "30" },
+				{ "parameter": "weight", "dataValue" : "73.5" },
+				{ "parameter": "height", "dataValue" : "251.0" }
+			]
+	},
+	{
+	"timestamp" : "14-04-2015 11:01:49.598",
+	"serviceName" : "HealthService",
+	"inputs":[ 	
+				{ "parameter" : "userId", "dataValue" : "6" }
+			],
+	"outputs":[
+				{ "parameter": "age", "dataValue" : "34" },
+				{ "parameter": "weight", "dataValue" : "73.5" },
+				{ "parameter": "height", "dataValue" : "371.0" }
+			]
+	},
+	{
+	"timestamp" : "14-04-2015 11:01:50.821",
+	"serviceName" : "HealthService",
+	"inputs":[ 	
+				{ "parameter" : "userId", "dataValue" : "7" }
+			],
+	"outputs":[
+				{ "parameter": "age", "dataValue" : "12" },
+				{ "parameter": "weight", "dataValue" : "68.3" },
+				{ "parameter": "height", "dataValue" : "120.0" }
+			]
+	},
+		{
+	"timestamp" : "14-04-2015 11:01:51.598",
+	"serviceName" : "HealthService",
+	"inputs":[ 	
+				{ "parameter" : "userId", "dataValue" : "8" }
+			],
+	"outputs":[
+				{ "parameter": "age", "dataValue" : "15" },
+				{ "parameter": "weight", "dataValue" : "73.5" },
+				{ "parameter": "height", "dataValue" : "138.0" }
+			]
+	},
+		{
+	"timestamp" : "14-04-2015 11:01:52.598",
+	"serviceName" : "HealthService",
+	"inputs":[ 	
+				{ "parameter" : "userId", "dataValue" : "9" }
+			],
+	"outputs":[
+				{ "parameter": "age", "dataValue" : "5" },
+				{ "parameter": "weight", "dataValue" : "73.5" },
+				{ "parameter": "height", "dataValue" : "24.0" }
+			]
+	},
+		{
+	"timestamp" : "14-04-2015 11:01:53.598",
+	"serviceName" : "HealthService",
+	"inputs":[ 	
+				{ "parameter" : "userId", "dataValue" : "10" }
+			],
+	"outputs":[
+				{ "parameter": "age", "dataValue" : "30" },
+				{ "parameter": "weight", "dataValue" : "73.5" },
+				{ "parameter": "height", "dataValue" : "185.0" }
+			]
+	}
+]

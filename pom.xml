@@ -1,14 +1,23 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>edu.fup.ims </groupId>
-  <artifactId>ims-monitoring-service</artifactId>
-  <version>1.0-SNAPSHOT</version>
-  <packaging>pom</packaging>
-  <name>ims-monitoring-service</name>
-  
-  <modules>
-  	<module>ims-monitoring-owl-approach</module>
-  	<module>ims-monitoring-drools-approach</module>
-  </modules>
-  
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>edu.fup.ims </groupId>
+	<artifactId>ims-monitoring-service</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>ims-monitoring-service</name>
+
+	<developers>
+		<developer>
+			<id>eraluis</id>
+			<name>Luis Eraso</name>
+			<email>luiseraso@gmail.com</email>
+		</developer>
+	</developers>
+
+	<modules>
+		<module>ims-monitoring-owl-approach</module>
+		<module>ims-monitoring-drools-approach</module>
+	</modules>
+
 </project>

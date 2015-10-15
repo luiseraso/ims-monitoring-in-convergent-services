@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#"
      xml:base="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl"/>
     
 
@@ -390,7 +390,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#orchestratedBy"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -408,7 +408,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#orchestratedBy"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#Task"/>
@@ -444,13 +444,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#orchestrates"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#orchestrates"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#Policy"/>
@@ -612,7 +612,7 @@
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#ServiceContract">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#legalAspect"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#specifies"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -620,6 +620,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#interactionAspect"/>
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#interactionAspect"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -636,13 +642,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#specifies"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#interactionAspect"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#legalAspect"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -696,13 +696,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#doneBy"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#doneBy"/>
-                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -792,7 +792,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#m1_pHeight">
         <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#OutputParameter"/>
-        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">95</hasValue>
+        <hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">280</hasValue>
         <hasType rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#height"/>
     </owl:NamedIndividual>
     
@@ -874,13 +874,13 @@
     <rdf:Description rdf:about="urn:swrl#x">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="urn:swrl#minvalue">
+    <rdf:Description rdf:about="urn:swrl#maxvalue">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description rdf:about="urn:swrl#v">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="urn:swrl#maxvalue">
+    <rdf:Description rdf:about="urn:swrl#minvalue">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description rdf:about="urn:swrl#boundary">
@@ -907,46 +907,40 @@
                 <rdf:rest>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#Parameter"/>
-                                <swrl:argument1 rdf:resource="urn:swrl#p"/>
-                            </rdf:Description>
-                        </rdf:first>
                         <rdf:rest>
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#RangeValueConstraint"/>
-                                        <swrl:argument1 rdf:resource="urn:swrl#c"/>
-                                    </rdf:Description>
-                                </rdf:first>
                                 <rdf:rest>
                                     <rdf:Description>
                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                         <rdf:rest>
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                <rdf:first>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#hasConstraint"/>
-                                                        <swrl:argument2 rdf:resource="urn:swrl#c"/>
-                                                        <swrl:argument1 rdf:resource="urn:swrl#t"/>
-                                                    </rdf:Description>
-                                                </rdf:first>
                                                 <rdf:rest>
                                                     <rdf:Description>
                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#hasParameter"/>
+                                                                <swrl:argument2 rdf:resource="urn:swrl#p"/>
+                                                                <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
                                                         <rdf:rest>
                                                             <rdf:Description>
                                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                                                                 <rdf:rest>
                                                                     <rdf:Description>
                                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#hasMaxValue"/>
+                                                                                <swrl:argument1 rdf:resource="urn:swrl#c"/>
+                                                                                <swrl:argument2 rdf:resource="urn:swrl#maxvalue"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
                                                                         <rdf:rest>
                                                                             <rdf:Description>
                                                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
@@ -961,6 +955,14 @@
                                                                                 <rdf:rest>
                                                                                     <rdf:Description>
                                                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                        <rdf:first>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#hasValue"/>
+                                                                                                <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                                                                                                <swrl:argument2 rdf:resource="urn:swrl#v"/>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:first>
                                                                                         <rdf:rest>
                                                                                             <rdf:Description>
                                                                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
@@ -978,19 +980,19 @@
                                                                                                 <rdf:rest>
                                                                                                     <rdf:Description>
                                                                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                                                                        <rdf:first>
-                                                                                                            <rdf:Description>
-                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
-                                                                                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
-                                                                                                                <swrl:arguments rdf:parseType="Collection">
-                                                                                                                    <rdf:Description rdf:about="urn:swrl#v"/>
-                                                                                                                    <rdf:Description rdf:about="urn:swrl#minvalue"/>
-                                                                                                                </swrl:arguments>
-                                                                                                            </rdf:Description>
-                                                                                                        </rdf:first>
                                                                                                         <rdf:rest>
                                                                                                             <rdf:Description>
                                                                                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                                <rdf:first>
+                                                                                                                    <rdf:Description>
+                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                                                                                                        <swrl:arguments rdf:parseType="Collection">
+                                                                                                                            <rdf:Description rdf:about="urn:swrl#v"/>
+                                                                                                                            <rdf:Description rdf:about="urn:swrl#boundary"/>
+                                                                                                                        </swrl:arguments>
+                                                                                                                    </rdf:Description>
+                                                                                                                </rdf:first>
                                                                                                                 <rdf:rest>
                                                                                                                     <rdf:Description>
                                                                                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
@@ -1038,42 +1040,26 @@
                                                                                                                         </rdf:first>
                                                                                                                     </rdf:Description>
                                                                                                                 </rdf:rest>
-                                                                                                                <rdf:first>
-                                                                                                                    <rdf:Description>
-                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
-                                                                                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
-                                                                                                                        <swrl:arguments rdf:parseType="Collection">
-                                                                                                                            <rdf:Description rdf:about="urn:swrl#v"/>
-                                                                                                                            <rdf:Description rdf:about="urn:swrl#boundary"/>
-                                                                                                                        </swrl:arguments>
-                                                                                                                    </rdf:Description>
-                                                                                                                </rdf:first>
                                                                                                             </rdf:Description>
                                                                                                         </rdf:rest>
+                                                                                                        <rdf:first>
+                                                                                                            <rdf:Description>
+                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                                                                                                <swrl:arguments rdf:parseType="Collection">
+                                                                                                                    <rdf:Description rdf:about="urn:swrl#v"/>
+                                                                                                                    <rdf:Description rdf:about="urn:swrl#minvalue"/>
+                                                                                                                </swrl:arguments>
+                                                                                                            </rdf:Description>
+                                                                                                        </rdf:first>
                                                                                                     </rdf:Description>
                                                                                                 </rdf:rest>
                                                                                             </rdf:Description>
                                                                                         </rdf:rest>
-                                                                                        <rdf:first>
-                                                                                            <rdf:Description>
-                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#hasValue"/>
-                                                                                                <swrl:argument1 rdf:resource="urn:swrl#p"/>
-                                                                                                <swrl:argument2 rdf:resource="urn:swrl#v"/>
-                                                                                            </rdf:Description>
-                                                                                        </rdf:first>
                                                                                     </rdf:Description>
                                                                                 </rdf:rest>
                                                                             </rdf:Description>
                                                                         </rdf:rest>
-                                                                        <rdf:first>
-                                                                            <rdf:Description>
-                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#hasMaxValue"/>
-                                                                                <swrl:argument1 rdf:resource="urn:swrl#c"/>
-                                                                                <swrl:argument2 rdf:resource="urn:swrl#maxvalue"/>
-                                                                            </rdf:Description>
-                                                                        </rdf:first>
                                                                     </rdf:Description>
                                                                 </rdf:rest>
                                                                 <rdf:first>
@@ -1086,150 +1072,6 @@
                                                                 </rdf:first>
                                                             </rdf:Description>
                                                         </rdf:rest>
-                                                        <rdf:first>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#hasParameter"/>
-                                                                <swrl:argument2 rdf:resource="urn:swrl#p"/>
-                                                                <swrl:argument1 rdf:resource="urn:swrl#x"/>
-                                                            </rdf:Description>
-                                                        </rdf:first>
-                                                    </rdf:Description>
-                                                </rdf:rest>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#ServiceExecution"/>
-                                                <swrl:argument1 rdf:resource="urn:swrl#x"/>
-                                            </rdf:Description>
-                                        </rdf:first>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#Warning"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#p"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#Exception"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#p"/>
-                    </rdf:Description>
-                </rdf:first>
-            </rdf:Description>
-        </swrl:head>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#InformationType"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                        <rdf:rest>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                                <rdf:rest>
-                                                                    <rdf:Description>
-                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                                        <rdf:rest>
-                                                                            <rdf:Description>
-                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                                                <rdf:first>
-                                                                                    <rdf:Description>
-                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#hasValue"/>
-                                                                                        <swrl:argument1 rdf:resource="urn:swrl#p"/>
-                                                                                        <swrl:argument2 rdf:resource="urn:swrl#v"/>
-                                                                                    </rdf:Description>
-                                                                                </rdf:first>
-                                                                                <rdf:rest>
-                                                                                    <rdf:Description>
-                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                                                        <rdf:first>
-                                                                                            <rdf:Description>
-                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
-                                                                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
-                                                                                                <swrl:arguments rdf:parseType="Collection">
-                                                                                                    <rdf:Description rdf:about="urn:swrl#v"/>
-                                                                                                    <rdf:Description rdf:about="urn:swrl#maxvalue"/>
-                                                                                                </swrl:arguments>
-                                                                                            </rdf:Description>
-                                                                                        </rdf:first>
-                                                                                    </rdf:Description>
-                                                                                </rdf:rest>
-                                                                            </rdf:Description>
-                                                                        </rdf:rest>
-                                                                        <rdf:first>
-                                                                            <rdf:Description>
-                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#hasMaxValue"/>
-                                                                                <swrl:argument1 rdf:resource="urn:swrl#c"/>
-                                                                                <swrl:argument2 rdf:resource="urn:swrl#maxvalue"/>
-                                                                            </rdf:Description>
-                                                                        </rdf:first>
-                                                                    </rdf:Description>
-                                                                </rdf:rest>
-                                                                <rdf:first>
-                                                                    <rdf:Description>
-                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#hasType"/>
-                                                                        <swrl:argument1 rdf:resource="urn:swrl#p"/>
-                                                                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                                                                    </rdf:Description>
-                                                                </rdf:first>
-                                                            </rdf:Description>
-                                                        </rdf:rest>
-                                                        <rdf:first>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#hasParameter"/>
-                                                                <swrl:argument2 rdf:resource="urn:swrl#p"/>
-                                                                <swrl:argument1 rdf:resource="urn:swrl#x"/>
-                                                            </rdf:Description>
-                                                        </rdf:first>
                                                     </rdf:Description>
                                                 </rdf:rest>
                                                 <rdf:first>
@@ -1271,6 +1113,164 @@
                 </rdf:rest>
             </rdf:Description>
         </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#Warning"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#RangeValueConstraint"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl#c"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#ServiceExecution"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#hasParameter"/>
+                                                                <swrl:argument2 rdf:resource="urn:swrl#p"/>
+                                                                <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                        <rdf:first>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                                                                                <swrl:arguments rdf:parseType="Collection">
+                                                                                                    <rdf:Description rdf:about="urn:swrl#v"/>
+                                                                                                    <rdf:Description rdf:about="urn:swrl#maxvalue"/>
+                                                                                                </swrl:arguments>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:first>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                                <rdf:first>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#hasValue"/>
+                                                                                        <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                                                                                        <swrl:argument2 rdf:resource="urn:swrl#v"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:first>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#hasMaxValue"/>
+                                                                                <swrl:argument1 rdf:resource="urn:swrl#c"/>
+                                                                                <swrl:argument2 rdf:resource="urn:swrl#maxvalue"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#hasType"/>
+                                                                        <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                                                                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#hasConstraint"/>
+                                                        <swrl:argument2 rdf:resource="urn:swrl#c"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl#t"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#Parameter"/>
+                                <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                            </rdf:Description>
+                        </rdf:first>
+                    </rdf:Description>
+                </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#InformationType"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#Exception"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                    </rdf:Description>
+                </rdf:first>
+            </rdf:Description>
+        </swrl:head>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
@@ -1290,13 +1290,6 @@
         <swrl:body>
             <rdf:Description>
                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#InformationType"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
                 <rdf:rest>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
@@ -1313,6 +1306,13 @@
                                 <rdf:rest>
                                     <rdf:Description>
                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#ServiceExecution"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                                            </rdf:Description>
+                                        </rdf:first>
                                         <rdf:rest>
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
@@ -1394,13 +1394,6 @@
                                                 </rdf:first>
                                             </rdf:Description>
                                         </rdf:rest>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#ServiceExecution"/>
-                                                <swrl:argument1 rdf:resource="urn:swrl#x"/>
-                                            </rdf:Description>
-                                        </rdf:first>
                                     </rdf:Description>
                                 </rdf:rest>
                             </rdf:Description>
@@ -1414,6 +1407,13 @@
                         </rdf:first>
                     </rdf:Description>
                 </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#InformationType"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
             </rdf:Description>
         </swrl:body>
     </rdf:Description>
@@ -1435,13 +1435,6 @@
         <swrl:body>
             <rdf:Description>
                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#InformationType"/>
-                        <swrl:argument1 rdf:resource="urn:swrl#t"/>
-                    </rdf:Description>
-                </rdf:first>
                 <rdf:rest>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
@@ -1468,50 +1461,26 @@
                                         <rdf:rest>
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#hasConstraint"/>
+                                                        <swrl:argument2 rdf:resource="urn:swrl#c"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl#t"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
                                                 <rdf:rest>
                                                     <rdf:Description>
                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                        <rdf:first>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#hasParameter"/>
-                                                                <swrl:argument2 rdf:resource="urn:swrl#p"/>
-                                                                <swrl:argument1 rdf:resource="urn:swrl#x"/>
-                                                            </rdf:Description>
-                                                        </rdf:first>
                                                         <rdf:rest>
                                                             <rdf:Description>
                                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                                <rdf:first>
-                                                                    <rdf:Description>
-                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#hasType"/>
-                                                                        <swrl:argument1 rdf:resource="urn:swrl#p"/>
-                                                                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
-                                                                    </rdf:Description>
-                                                                </rdf:first>
                                                                 <rdf:rest>
                                                                     <rdf:Description>
                                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                                        <rdf:first>
-                                                                            <rdf:Description>
-                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#hasMaxValue"/>
-                                                                                <swrl:argument1 rdf:resource="urn:swrl#c"/>
-                                                                                <swrl:argument2 rdf:resource="urn:swrl#maxvalue"/>
-                                                                            </rdf:Description>
-                                                                        </rdf:first>
                                                                         <rdf:rest>
                                                                             <rdf:Description>
                                                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                                                <rdf:first>
-                                                                                    <rdf:Description>
-                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#hasMinValue"/>
-                                                                                        <swrl:argument1 rdf:resource="urn:swrl#c"/>
-                                                                                        <swrl:argument2 rdf:resource="urn:swrl#minvalue"/>
-                                                                                    </rdf:Description>
-                                                                                </rdf:first>
                                                                                 <rdf:rest>
                                                                                     <rdf:Description>
                                                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
@@ -1521,42 +1490,19 @@
                                                                                                 <rdf:rest>
                                                                                                     <rdf:Description>
                                                                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                        <rdf:first>
+                                                                                                            <rdf:Description>
+                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
+                                                                                                                <swrl:arguments rdf:parseType="Collection">
+                                                                                                                    <rdf:Description rdf:about="urn:swrl#v"/>
+                                                                                                                    <rdf:Description rdf:about="urn:swrl#maxvalue"/>
+                                                                                                                </swrl:arguments>
+                                                                                                            </rdf:Description>
+                                                                                                        </rdf:first>
                                                                                                         <rdf:rest>
                                                                                                             <rdf:Description>
                                                                                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                                                                                <rdf:rest>
-                                                                                                                    <rdf:Description>
-                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                                                                                        <rdf:first>
-                                                                                                                            <rdf:Description>
-                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
-                                                                                                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#subtract"/>
-                                                                                                                                <swrl:arguments rdf:parseType="Collection">
-                                                                                                                                    <rdf:Description rdf:about="urn:swrl#boundary"/>
-                                                                                                                                    <rdf:Description rdf:about="urn:swrl#maxvalue"/>
-                                                                                                                                    <rdf:Description rdf:about="urn:swrl#delta"/>
-                                                                                                                                </swrl:arguments>
-                                                                                                                            </rdf:Description>
-                                                                                                                        </rdf:first>
-                                                                                                                        <rdf:rest>
-                                                                                                                            <rdf:Description>
-                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                                                                                                <rdf:first>
-                                                                                                                                    <rdf:Description>
-                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
-                                                                                                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#subtract"/>
-                                                                                                                                        <swrl:arguments rdf:parseType="Collection">
-                                                                                                                                            <rdf:Description rdf:about="urn:swrl#range"/>
-                                                                                                                                            <rdf:Description rdf:about="urn:swrl#maxvalue"/>
-                                                                                                                                            <rdf:Description rdf:about="urn:swrl#minvalue"/>
-                                                                                                                                        </swrl:arguments>
-                                                                                                                                    </rdf:Description>
-                                                                                                                                </rdf:first>
-                                                                                                                            </rdf:Description>
-                                                                                                                        </rdf:rest>
-                                                                                                                    </rdf:Description>
-                                                                                                                </rdf:rest>
                                                                                                                 <rdf:first>
                                                                                                                     <rdf:Description>
                                                                                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
@@ -1582,18 +1528,41 @@
                                                                                                                         </swrl:arguments>
                                                                                                                     </rdf:Description>
                                                                                                                 </rdf:first>
+                                                                                                                <rdf:rest>
+                                                                                                                    <rdf:Description>
+                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                                        <rdf:rest>
+                                                                                                                            <rdf:Description>
+                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                                                                <rdf:first>
+                                                                                                                                    <rdf:Description>
+                                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                                                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#subtract"/>
+                                                                                                                                        <swrl:arguments rdf:parseType="Collection">
+                                                                                                                                            <rdf:Description rdf:about="urn:swrl#range"/>
+                                                                                                                                            <rdf:Description rdf:about="urn:swrl#maxvalue"/>
+                                                                                                                                            <rdf:Description rdf:about="urn:swrl#minvalue"/>
+                                                                                                                                        </swrl:arguments>
+                                                                                                                                    </rdf:Description>
+                                                                                                                                </rdf:first>
+                                                                                                                            </rdf:Description>
+                                                                                                                        </rdf:rest>
+                                                                                                                        <rdf:first>
+                                                                                                                            <rdf:Description>
+                                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                                                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#subtract"/>
+                                                                                                                                <swrl:arguments rdf:parseType="Collection">
+                                                                                                                                    <rdf:Description rdf:about="urn:swrl#boundary"/>
+                                                                                                                                    <rdf:Description rdf:about="urn:swrl#maxvalue"/>
+                                                                                                                                    <rdf:Description rdf:about="urn:swrl#delta"/>
+                                                                                                                                </swrl:arguments>
+                                                                                                                            </rdf:Description>
+                                                                                                                        </rdf:first>
+                                                                                                                    </rdf:Description>
+                                                                                                                </rdf:rest>
                                                                                                             </rdf:Description>
                                                                                                         </rdf:rest>
-                                                                                                        <rdf:first>
-                                                                                                            <rdf:Description>
-                                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
-                                                                                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
-                                                                                                                <swrl:arguments rdf:parseType="Collection">
-                                                                                                                    <rdf:Description rdf:about="urn:swrl#v"/>
-                                                                                                                    <rdf:Description rdf:about="urn:swrl#maxvalue"/>
-                                                                                                                </swrl:arguments>
-                                                                                                            </rdf:Description>
-                                                                                                        </rdf:first>
                                                                                                     </rdf:Description>
                                                                                                 </rdf:rest>
                                                                                                 <rdf:first>
@@ -1618,22 +1587,46 @@
                                                                                         </rdf:first>
                                                                                     </rdf:Description>
                                                                                 </rdf:rest>
+                                                                                <rdf:first>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#hasMinValue"/>
+                                                                                        <swrl:argument1 rdf:resource="urn:swrl#c"/>
+                                                                                        <swrl:argument2 rdf:resource="urn:swrl#minvalue"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:first>
                                                                             </rdf:Description>
                                                                         </rdf:rest>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#hasMaxValue"/>
+                                                                                <swrl:argument1 rdf:resource="urn:swrl#c"/>
+                                                                                <swrl:argument2 rdf:resource="urn:swrl#maxvalue"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
                                                                     </rdf:Description>
                                                                 </rdf:rest>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#hasType"/>
+                                                                        <swrl:argument1 rdf:resource="urn:swrl#p"/>
+                                                                        <swrl:argument2 rdf:resource="urn:swrl#t"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
                                                             </rdf:Description>
                                                         </rdf:rest>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#hasParameter"/>
+                                                                <swrl:argument2 rdf:resource="urn:swrl#p"/>
+                                                                <swrl:argument1 rdf:resource="urn:swrl#x"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
                                                     </rdf:Description>
                                                 </rdf:rest>
-                                                <rdf:first>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#hasConstraint"/>
-                                                        <swrl:argument2 rdf:resource="urn:swrl#c"/>
-                                                        <swrl:argument1 rdf:resource="urn:swrl#t"/>
-                                                    </rdf:Description>
-                                                </rdf:first>
                                             </rdf:Description>
                                         </rdf:rest>
                                     </rdf:Description>
@@ -1649,6 +1642,13 @@
                         </rdf:first>
                     </rdf:Description>
                 </rdf:rest>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/ontologies/2010/01/core-soa.owl#InformationType"/>
+                        <swrl:argument1 rdf:resource="urn:swrl#t"/>
+                    </rdf:Description>
+                </rdf:first>
             </rdf:Description>
         </swrl:body>
     </rdf:Description>
